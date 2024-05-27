@@ -1,7 +1,7 @@
 {
   "name": "the-office-back",
   "version": "1.0.0",
-  "main": "commitlint.config.js",
+  "main": "dist/index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
