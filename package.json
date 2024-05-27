@@ -1,12 +1,21 @@
 {
-  "dependencies": {
-    "husky": "^9.0.11",
-    "y": "^0.3.2"
-  },
+  "name": "the-office-back",
+  "version": "1.0.0",
+  "main": "commitlint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
   "scripts": {
     "prepare": "husky"
   },
   "devDependencies": {
-    "lint-staged": "^15.2.5"
-  }
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "lint-staged": "^15.2.5",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {}
 }
