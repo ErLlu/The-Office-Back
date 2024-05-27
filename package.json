@@ -8,14 +8,30 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "build": "tsc",
+    "build:dev": "tsc -w",
+    "start": "node .",
+    "start:dev": "node --watch .",
     "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "lint-staged": "^15.2.5",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "@types/express": "^4.17.21",
+    "eslint": "^8.57.0",
+    "eslint-config-xo": "^0.45.0",
+    "eslint-config-xo-typescript": "^4.0.0",
     "husky": "^9.0.11",
-    "prettier": "^3.2.5"
+    "lint-staged": "^15.2.5",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "eslint-config-prettier": "^9.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
 }
