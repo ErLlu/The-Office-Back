@@ -2,7 +2,8 @@ type CharacterStructure = {
   name: string;
   age: number;
   position: string;
-  state: boolean;
+  seasons: string;
+  isWorking: boolean;
   urlImage: string;
   alternativeText: string;
   description: string;
