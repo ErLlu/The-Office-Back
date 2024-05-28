@@ -1,6 +1,11 @@
 import "dotenv/config";
-import servServer from "./app.js";
+import { app } from "./app";
+import chalk from "chalk";
 
-const port = process.env.PORT ?? 8001;
+export const startServer = (port: number) => {
+  app.listen(port, () => {
+    console.log(`Listening on ${chalk.green(`http://localhost:${port}`)}`);
+  });
+};
 
-servServer(port as number);
+export default startServer;
