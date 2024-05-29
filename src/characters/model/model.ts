@@ -5,7 +5,6 @@ const characterSchema = new Schema<CharacterStructure>({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
   age: {
     type: Number,
@@ -36,6 +35,6 @@ const characterSchema = new Schema<CharacterStructure>({
   },
 });
 
-const Character = mongoose.model("Character", characterSchema, "Characters");
+const character = mongoose.model("Character", characterSchema, "characters");
 
-export default Character;
+export default character;

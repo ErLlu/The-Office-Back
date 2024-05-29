@@ -1,4 +1,4 @@
-type CharacterStructure = {
+interface CharacterStructure {
   name: string;
   age: number;
   position: string;
@@ -7,5 +7,6 @@ type CharacterStructure = {
   urlImage: string;
   alternativeText: string;
   description: string;
-};
+}
+
 export default CharacterStructure;
