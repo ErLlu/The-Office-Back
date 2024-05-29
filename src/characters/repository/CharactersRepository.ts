@@ -1,8 +1,7 @@
-import type CharacterStructure from "../types";
-import type CharacterRepository from "./types";
 import { type Model } from "mongoose";
+import type CharacterStructure from "../types";
 
-class CharactersRepository implements CharacterRepository {
+class CharactersRepository implements CharactersRepository {
   constructor(public characterModel: Model<CharacterStructure>) {}
 
   async getAll(): Promise<CharacterStructure[]> {

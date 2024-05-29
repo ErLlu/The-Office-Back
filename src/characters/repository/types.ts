@@ -1,7 +1,7 @@
-import type Character from "../types";
+import type Character from "../types.js";
 
-interface CharacterRepository {
+interface CharactersRepository {
   getAll(): Promise<Character[]>;
 }
 
-export default CharacterRepository;
+export default CharactersRepository;
