@@ -1,6 +1,6 @@
-import chalk from "chalk";
 import "dotenv/config";
-import { app } from "./app";
+import chalk from "chalk";
+import { app } from "./app.js";
 
 export const startServer = (port: number) => {
   app.listen(port, () => {
