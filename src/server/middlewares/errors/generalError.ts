@@ -1,5 +1,5 @@
 import { type NextFunction, type Request, type Response } from "express";
-import type ServerError from "../ServerError/ServerError";
+import type ServerError from "../ServerError/ServerError.js";
 import chalk from "chalk";
 
 const generalError = (
