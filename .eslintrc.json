@@ -9,6 +9,12 @@
       "extends": ["xo-typescript", "prettier"],
       "files": ["*.ts"],
       "rules": {
+        "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
+      }
+    },
+    {
+      "files": ["**/src/**/model/*.ts"],
+      "rules": {
         "@typescript-eslint/naming-convention": "off"
       }
     }
