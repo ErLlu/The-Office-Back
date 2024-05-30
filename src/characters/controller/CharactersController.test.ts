@@ -7,11 +7,13 @@ describe("Given a CharactersController getCharacter method", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
+
   const req = {};
   const res: Partial<Response> = {
     status: jest.fn().mockReturnThis(),
     json: jest.fn(),
   };
+
   describe("When it receives a Response", () => {
     const characters: Character[] = [
       {
@@ -25,6 +27,7 @@ describe("Given a CharactersController getCharacter method", () => {
         description: "",
       },
     ];
+
     const charactersRepository: CharactersRepository = {
       getAll: async () => characters,
     };
@@ -41,6 +44,7 @@ describe("Given a CharactersController getCharacter method", () => {
 
       expect(res.status).toHaveBeenCalledWith(200);
     });
+
     test("Then it should call its json method with a characters list", async () => {
       await charactersController.getCharacters(
         req as Request,

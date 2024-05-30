@@ -1,7 +1,7 @@
 import express from "express";
 import morgan from "morgan";
-import notFoundError from "../server/middlewares/errors/notFoundError.js";
-import generalError from "../server/middlewares/errors/generalError.js";
+import notFoundError from "../middlewares/errors/notFoundError.js";
+import generalError from "../middlewares/errors/generalError.js";
 
 export const app = express();
 
