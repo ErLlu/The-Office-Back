@@ -3,7 +3,7 @@ import type CharactersRepository from "../repository/types";
 import type Character from "../types";
 import CharacterController from "./CharactersController";
 
-describe("Given a CharacterController getCharacter method", () => {
+describe("Given a CharactersController getCharacter method", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -25,15 +25,15 @@ describe("Given a CharacterController getCharacter method", () => {
         description: "",
       },
     ];
-    const characterRepository: CharactersRepository = {
+    const charactersRepository: CharactersRepository = {
       getAll: async () => characters,
     };
 
     const next = jest.fn();
-    const characterController = new CharacterController(characterRepository);
+    const charactersController = new CharacterController(charactersRepository);
 
     test("Then it should call its status method with 200", async () => {
-      await characterController.getCharacters(
+      await charactersController.getCharacters(
         req as Request,
         res as Response,
         next as NextFunction,
@@ -42,7 +42,7 @@ describe("Given a CharacterController getCharacter method", () => {
       expect(res.status).toHaveBeenCalledWith(200);
     });
     test("Then it should call its json method with a characters list", async () => {
-      await characterController.getCharacters(
+      await charactersController.getCharacters(
         req as Request,
         res as Response,
         next as NextFunction,
