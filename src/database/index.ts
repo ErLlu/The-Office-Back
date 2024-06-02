@@ -1,9 +1,10 @@
 import chalk from "chalk";
 import mongoose from "mongoose";
 
-const connectToDataBase = async (uri: string) => {
+const connectToDataBase = async (dataBaseUri: string): Promise<void> => {
   try {
-    await mongoose.connect(uri);
+    await mongoose.connect(dataBaseUri);
+    console.log(chalk.green("Connected to database"));
   } catch (error) {
     console.log(
       chalk.red("Error connecting database", (error as Error).message),
