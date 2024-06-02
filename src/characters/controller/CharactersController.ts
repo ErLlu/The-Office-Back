@@ -1,5 +1,5 @@
-import ServerError from "../../server/middlewares/ServerError/ServerError";
-import type CharactersRepository from "../repository/types";
+import ServerError from "../../server/middlewares/ServerError/ServerError.js";
+import type CharactersRepository from "../repository/types.js";
 import type CharactersControllerStructure from "./types";
 import { type NextFunction, type Request, type Response } from "express";
 

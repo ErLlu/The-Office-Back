@@ -1,6 +1,7 @@
 import { type Request, type Response } from "express";
 import type ServerError from "../../ServerError/ServerError.js";
 import generalError from "../generalError.js";
+import CharactersRepository from "../../../../characters/repository/CharactersRepository.js";
 
 let res: Pick<Response, "status" | "json">;
 const req = {};
@@ -36,10 +37,9 @@ describe("Given the generalError middleware", () => {
     const error = {
       message: "Server failed: Unknown error",
     };
+    const expectedStatusCode = 500;
 
     test("Then it should call the response's status method with 500", () => {
-      const expectedStatusCode = 500;
-
       generalError(error as ServerError, req as Request, res as Response, next);
 
       expect(res.status).toHaveBeenCalledWith(expectedStatusCode);
