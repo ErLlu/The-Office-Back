@@ -1,8 +1,8 @@
-import chalk from "chalk/index.js";
+import chalk from "chalk";
 import { type NextFunction, type Request, type Response } from "express";
 import ServerError from "../../server/middlewares/ServerError/ServerError.js";
 import type CharactersRepository from "../repository/types.js";
-import type CharactersControllerStructure from "./types";
+import type CharactersControllerStructure from "./types.js";
 
 class CharactersController implements CharactersControllerStructure {
   constructor(public repository: CharactersRepository) {}

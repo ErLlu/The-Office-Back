@@ -1,5 +1,5 @@
-import type CharacterStructure from "../types";
 import mongoose, { Schema } from "mongoose";
+import type CharacterStructure from "../types";
 
 const characterSchema = new Schema<CharacterStructure>({
   name: {

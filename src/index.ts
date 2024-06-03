@@ -5,6 +5,11 @@ import startServer from "./server/index.js";
 const port = process.env.PORT ?? 8001;
 
 const dataBaseUri = process.env.MONGODB_URL!;
-await connectToDataBase(dataBaseUri);
 
-startServer(port as number);
+try {
+  await connectToDataBase(dataBaseUri);
+  console.log("Connected to data base");
+  startServer(port as number);
+} catch (error) {
+  console.error("Error connecting to database:", error);
+}

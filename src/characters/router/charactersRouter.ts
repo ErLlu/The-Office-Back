@@ -1,7 +1,7 @@
 import { Router } from "express";
-import CharactersRepository from "../../characters/repository/CharactersRepository.js";
-import CharactersController from "../../characters/controller/CharactersController.js";
-import Character from "../../characters/model/Character.js";
+import CharactersRepository from "../repository/CharactersRepository.js";
+import CharactersController from "../controller/CharactersController.js";
+import Character from "../model/Character.js";
 
 const charactersRouter = Router();
 
