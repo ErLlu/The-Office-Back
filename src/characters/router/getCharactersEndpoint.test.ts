@@ -1,16 +1,17 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
+import { app } from "../../server/app/app";
 import request from "supertest";
 import connectToDataBase from "../../database";
-import Character from "../../characters/model/Character";
-import { app } from "../app/app";
-import type CharacterStructure from "../../characters/types";
+import Character from "../model/Character";
+import type CharacterStructure from "../types";
 
 let server: MongoMemoryServer;
 
 beforeAll(async () => {
   server = await MongoMemoryServer.create();
   const mongoDbUrl = server.getUri();
+
   await connectToDataBase(mongoDbUrl);
 });
 
