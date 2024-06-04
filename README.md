@@ -37,9 +37,10 @@ The API is available at `http://localhost:8000` (or the port specified in your e
 
 ## BODY
 
-# Get all Characters
+#### Get all Characters
 
 When the response is succesfull in the body he will return, for exemple:
+
 [{
 "_id": "6659d787a96208e9cdc68d3b",
 "name": "Michael Scott",
