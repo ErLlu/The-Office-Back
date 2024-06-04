@@ -8,7 +8,6 @@ const dataBaseUri = process.env.MONGODB_URL!;
 
 try {
   await connectToDataBase(dataBaseUri);
-  console.log("Connected to data base");
   startServer(port as number);
 } catch (error) {
   console.error("Error connecting to database:", error);
