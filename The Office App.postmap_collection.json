@@ -7,16 +7,16 @@
   },
   "item": [
     {
-      "name": "http://localhost:8000/characters",
+      "name": "get characters",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8000/",
+          "raw": "http://localhost:8000/characters",
           "protocol": "http",
           "host": ["localhost"],
           "port": "8000",
-          "path": [""]
+          "path": ["characters"]
         }
       },
       "response": []
