@@ -39,6 +39,8 @@ The API is available at `http://localhost:8000` (or the port specified in your e
 
 #### Get all Characters
 
+#### Get all Characters
+
 When the response is succesfull in the body he will return, for exemple:
 
 ```json
