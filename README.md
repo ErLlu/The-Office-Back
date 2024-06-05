@@ -63,5 +63,10 @@ When the response is succesfull in the body he will return, for exemple:
 
 In case of errors, the API will return responses in the following format:
 
-Error Response:
-error: Descriptive error message
+Error 404 Response:
+
+```json
+{
+  "error": "Endpoint not found"
+}
+```

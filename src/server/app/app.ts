@@ -6,6 +6,7 @@ import generalError from "../middlewares/errors/generalError.js";
 import charactersRouter from "../../characters/router/charactersRouter.js";
 
 export const app = express();
+app.disable("x-powered-by");
 
 app.use(morgan("dev"));
 
