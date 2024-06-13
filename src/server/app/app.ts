@@ -12,7 +12,7 @@ app.use(morgan("dev"));
 
 app.use(
   cors({
-    origin: process.env.ORIGIN ?? "",
+    origin: (process.env.ORIGINS ?? "").split(","),
   }),
 );
 
