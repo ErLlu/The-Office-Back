@@ -9,6 +9,12 @@ class CharactersRepository implements CharactersRepository {
 
     return characters;
   }
+
+  async createCharacter(
+    characterData: CharacterData,
+  ): Promise<CharacterStructure> {
+    return this.characterModel.create(characterData);
+  }
 }
 
 export default CharactersRepository;
