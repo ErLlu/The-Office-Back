@@ -34,6 +34,9 @@ describe("Given a CharactersController getCharacter method", () => {
 
     const charactersRepository: CharactersRepository = {
       getAll: async () => characters,
+      async createCharacter(characterData: CharacterData): Promise<Character> {
+        throw new Error("Function not implemented.");
+      },
     };
 
     const next = jest.fn();
@@ -64,6 +67,9 @@ describe("Given a CharactersController getCharacter method", () => {
     const repository: CharactersRepository = {
       async getAll(): Promise<CharacterStructure[]> {
         throw new Error("Failed to get characters");
+      },
+      async createCharacter(characterData: CharacterData): Promise<Character> {
+        throw new Error("Function not implemented.");
       },
     };
 
