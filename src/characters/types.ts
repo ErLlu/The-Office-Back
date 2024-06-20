@@ -1,4 +1,5 @@
-interface CharacterStructure {
+export interface CharacterStructure {
+  _id: string;
   name: string;
   age: number;
   position: string;
@@ -9,4 +10,4 @@ interface CharacterStructure {
   description: string;
 }
 
-export default CharacterStructure;
+export type CharacterDataInfo = Omit<CharacterStructure, "_id" | "isWorking">;

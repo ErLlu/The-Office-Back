@@ -3,7 +3,7 @@ import { type NextFunction, type Request, type Response } from "express";
 import ServerError from "../../server/middlewares/ServerError/ServerError.js";
 import type CharactersRepository from "../repository/types.js";
 import type CharactersControllerStructure from "./types.js";
-import { type RequestCharacterData } from "./types.js";
+import { type RequestCharacterDataInfo } from "./types.js";
 
 class CharactersController implements CharactersControllerStructure {
   constructor(public repository: CharactersRepository) {}
@@ -26,7 +26,7 @@ class CharactersController implements CharactersControllerStructure {
   };
 
   createCharacter = async (
-    req: RequestCharacterData,
+    req: RequestCharacterDataInfo,
     res: Response,
     next: NextFunction,
   ): Promise<void> => {

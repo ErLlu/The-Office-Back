@@ -1,9 +1,10 @@
-import type Character from "../types.js";
-import type CharacterStructure from "../types.js";
+import { type CharacterStructure, type CharacterDataInfo } from "../types.js";
 
 interface CharactersRepository {
-  getAll(): Promise<Character[]>;
-  createCharacter(characterData: CharacterData): Promise<CharacterStructure>;
+  getAll(): Promise<CharacterStructure[]>;
+  createCharacter(
+    characterDataInfo: CharacterDataInfo,
+  ): Promise<CharacterStructure>;
 }
 
 export default CharactersRepository;
