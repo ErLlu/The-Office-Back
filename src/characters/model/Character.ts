@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import type CharacterStructure from "../types";
+import { type CharacterStructure } from "../types";
 
 const characterSchema = new Schema<CharacterStructure>({
   name: {
@@ -11,14 +11,12 @@ const characterSchema = new Schema<CharacterStructure>({
   },
   position: {
     type: String,
-    required: true,
   },
   seasons: {
     type: String,
   },
   isWorking: {
     type: Boolean,
-    required: true,
   },
   urlImage: {
     type: String,
@@ -26,12 +24,10 @@ const characterSchema = new Schema<CharacterStructure>({
   },
   alternativeText: {
     type: String,
-    required: true,
     default: "Personaje de The Office",
   },
   description: {
     type: String,
-    required: true,
   },
 });
 

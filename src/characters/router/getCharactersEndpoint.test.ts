@@ -4,7 +4,7 @@ import { app } from "../../server/app/app";
 import request from "supertest";
 import connectToDataBase from "../../database";
 import Character from "../model/Character";
-import type CharacterStructure from "../types";
+import { type CharacterStructure } from "../types";
 
 let server: MongoMemoryServer;
 
@@ -20,7 +20,7 @@ afterAll(async () => {
   await server.stop();
 });
 
-const juan: CharacterStructure = {
+const juan: Omit<CharacterStructure, "_id"> = {
   name: "Juan",
   age: 30,
   position: "Musico de ambiente en la oficina",

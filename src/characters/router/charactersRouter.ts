@@ -10,5 +10,6 @@ const charactersRepository = new CharactersRepository(Character);
 const charactersController = new CharactersController(charactersRepository);
 
 charactersRouter.get("/", charactersController.getCharacters);
+charactersRouter.post("/", charactersController.createCharacter);
 
 export default charactersRouter;
